@@ -1,0 +1,35 @@
+import random
+
+tabuleiro1 = [
+    [0,0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0,0]
+]
+tabuleiro2 = [
+    [0,0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0,0]
+]
+print("Tabuleiro 1:")
+for coluna in range(5):
+    print(tabuleiro1[coluna])
+print("Tabuleiro 2:")
+for coluna in range(5):
+    print(tabuleiro2[coluna])
+colunas = []
+for valor in range(10):
+    colunas.append(valor)
+linhas = []
+for num in range(5):
+    linhas.append(num)
+for quant in range(5):
+    posColunas = random.choice(colunas)
+    posLinhas = random.choice(linhas)
+    tabuleiro2[posLinhas][posColunas]= 3
+print("Tabuleiro 2:")
+for coluna in range(5):
+    print(tabuleiro2[coluna])
